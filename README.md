@@ -1,0 +1,1 @@
+VUejs auth with drf
