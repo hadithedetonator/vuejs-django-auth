@@ -29,6 +29,14 @@ export default {
       password: ''
     };
   },
+  watch: {
+    username(newValue) {
+      console.log('Username:', newValue);
+    },
+    password(newValue) {
+      console.log('Password:', newValue);
+    }
+  },
   methods: {
     handleLogin() {
       // Add login logic here                         here handle the validation 
