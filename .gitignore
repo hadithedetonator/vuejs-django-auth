@@ -1,1 +1,4 @@
 myenv/
+settings.py
+db.sqlite3
+_pychache_/
