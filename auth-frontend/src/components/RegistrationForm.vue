@@ -27,7 +27,10 @@
     </div>
   </template>
   
+
   <script>
+  import axios from '../axios'; // Import your Axios instance
+  
   export default {
     name: 'RegistrationForm',
     data() {
@@ -35,19 +38,49 @@
         username: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        error: ''
       };
     },
     methods: {
-      handleRegistration() {
-        if (this.password !== this.confirmPassword) {
-          alert('Passwords do not match!');
-          return;
-        }
-        // Add registration logic here
-        
-        console.log('Registering:', this.username, this.email);
-      }
+      async handleRegistration() {
+  if (this.password !== this.confirmPassword) {
+    this.error = 'Passwords do not match!';
+    return;
+  }
+
+  try {
+    const response = await axios.post('register/', {
+      username: this.username,
+      email: this.email,
+      password: this.password
+    });
+    
+    alert('Registration successful!');
+    // Reset the form fields
+    this.username = '';
+    this.email = '';
+    this.password = '';
+    this.confirmPassword = '';
+  } catch (err) {
+    if (err.response) {
+      this.error = err.response.data.error || 'Registration failed';
+    } else if (err.request) {
+      this.error = 'No response from server. Please check your connection.';
+    } else {
+      this.error = 'An unexpected error occurred: ' + err.message;
+    }
+  }
+}
+    },
+    watch: {
+    username(newValue) {
+      console.log('Username:', newValue);
+    },
+    password(newValue) {
+      console.log('Password:', newValue);
+    }
+    
     }
   }
   </script>
