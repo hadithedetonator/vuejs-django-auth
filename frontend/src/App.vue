@@ -28,13 +28,3 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-
-<script>
-import OrganismHeader from './components/organisms/OrganismHeader.vue';
-
-export default {
-  components: {
-    OrganismHeader
-  }
-};
-</script>

@@ -1,30 +1,25 @@
 <template>
-    <div v-if="pokemon" class="pokemon-detail">
-      <OrganismPokemonCard :pokemon="pokemon" />
-    </div>
-  </template>
-  
-  <script>
-  import OrganismPokemonCard from '../organisms/OrganismPokemonCard.vue';
-  
-  export default {
-    name: 'TemplatePokemonDetail',
-    components: {
-      OrganismPokemonCard
+  <div>
+    <h1>{{ pokemon.name }}</h1>
+    <!-- Use double curly braces to bind the name -->
+    <!-- Add any additional Pokémon details here -->
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    pokemon: {
+      type: Object,
+      required: true,
     },
-    props: {
-      pokemon: {
-        type: Object,
-        required: true
-      }
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .pokemon-detail {
-    display: flex;
-    justify-content: center;
-  }
-  </style>
-  
+  },
+};
+</script>
+
+<style scoped>
+.pokemon-detail {
+  display: flex;
+  justify-content: center;
+}
+</style>
