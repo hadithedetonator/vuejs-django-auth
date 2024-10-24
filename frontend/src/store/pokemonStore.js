@@ -21,7 +21,6 @@ export const usePokemonStore = defineStore("pokemon", {
           image: "/assets/images/charmander.png",
           description: "Fire type",
         },
-        // Add more Pokémon...
       ];
     },
     selectPokemon(pokemon) {
