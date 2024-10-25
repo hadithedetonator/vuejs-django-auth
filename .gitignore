@@ -1,4 +1,5 @@
-myenv/
+env/
 settings.py
 db.sqlite3
-_pychache_/
+*.pyc
+migrations/
