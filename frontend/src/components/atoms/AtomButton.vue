@@ -1,5 +1,5 @@
 <template>
-  <button class="button-9" role="button">{{ label }}</button>
+  <button class="button-6" role="button">{{ label }}</button>
 </template>
 
 <script>
@@ -8,51 +8,58 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
+      required: true, // You can change this to false if the label is optional
     },
   },
 };
 </script>
 
-<style scoped>
-.button-9 {
-  appearance: button;
-  backface-visibility: hidden;
-  background-color: #405cf5;
-  border-radius: 6px;
-  border-width: 0;
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+<style>
+.button-6 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    Ubuntu, sans-serif;
-  font-size: 100%;
-  height: 44px;
-  line-height: 1.15;
-  margin: 12px 0 0;
-  outline: none;
-  overflow: hidden;
-  padding: 0 25px;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
-  text-align: center;
-  text-transform: none;
-  transform: translateZ(0);
-  transition: all 0.2s, box-shadow 0.08s ease-in;
+  text-decoration: none;
+  transition: all 250ms;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  vertical-align: baseline;
+  width: auto;
 }
 
-.button-9:disabled {
-  cursor: default;
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
-.button-9:focus {
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 </style>

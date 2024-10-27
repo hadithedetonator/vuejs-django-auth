@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PageHome from "../pages/PageHome.vue";
-import PageLogin from "../pages/PageLogin.vue"; // Import the login page component
-import PageRegister from "../pages/PageRegister.vue"; // Make sure this path is correct
+import LoginPage from "@/pages/LoginPage.vue";
+import ServicesPage from "@/pages/ServicesPage.vue";
+import SignUpPage from "@/pages/SignUpPage.vue";
 
 const routes = [
-  { path: "/", component: PageHome },
-  { path: "/login", component: PageLogin }, // Add login route
-  { path: "/register", component: PageRegister }, // Add the register path
+  { path: "/login", component: LoginPage },
+  { path: "/services", component: ServicesPage },
+  { path: "/signup", component: SignUpPage },
 ];
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
