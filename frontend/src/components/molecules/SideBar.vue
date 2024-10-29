@@ -81,7 +81,6 @@ export default {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   gap: 10px; /* Space between buttons */
-  border-radius: 50px;
 }
 
 .sub-buttons {

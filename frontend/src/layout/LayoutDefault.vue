@@ -1,6 +1,7 @@
 <template>
   <div class="layout-default">
     <OrganismHeader />
+    <SideBar />
     <main>
       <slot />
     </main>
@@ -8,8 +9,8 @@
 </template>
 
 <script>
-import OrganismHeader from "../components/organisms/OrganismHeader.vue";
-
+import OrganismHeader from "@/components/organisms/OrganismHeader.vue";
+import SideBar from "@/components/molecules/SideBar.vue";
 export default {
   name: "LayoutDefault",
   components: {

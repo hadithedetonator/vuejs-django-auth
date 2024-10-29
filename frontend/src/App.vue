@@ -1,15 +1,17 @@
 <template>
   <LayoutDefault>
-    <SideBar />
     <router-view />
   </LayoutDefault>
 </template>
 
 <script>
-import SideBar from "./components/molecules/SideBar.vue";
+import "./css/tailwind.css";
 export default {
-  components: {
-    SideBar,
-  },
+  components: {},
 };
 </script>
+<style>
+body {
+  background-color: rgba(255, 255, 255, 0.101);
+}
+</style>
